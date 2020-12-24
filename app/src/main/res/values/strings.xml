@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sride</string>
+    <string name="countryName">Country</string>
+    <string name="totalcases">Total Cases</string>
+    <string name="deaths">Deaths</string>
+    <string name="recoverd">Recovered</string>
+    <string name="day">Day</string>
+    <string name="max_temp">Max Temp</string>
+    <string name="min_temp">Min Temp</string>
+</resources>
