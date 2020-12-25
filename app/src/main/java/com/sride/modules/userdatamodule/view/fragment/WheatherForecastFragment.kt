@@ -1,5 +1,6 @@
 package com.sride.modules.userdatamodule.view.fragment
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -75,8 +76,19 @@ class WheatherForecastFragment : Fragment(), IUserDataView {
                 var nextDate = sdf.format(endateCal.time)
                 if (!isPrime) {
                     callGetWheatherApi(nextDate)
+                }else{
+                    showdialoag()
                 }
             }
+    }
+
+    private fun showdialoag() {
+        val builder = AlertDialog.Builder(activity)
+        builder.setTitle(R.string.dialogTitle)
+        builder.setMessage(R.string.dialogMessage)
+        builder.setIcon(android.R.drawable.ic_dialog_alert)
+        val alertDialog: AlertDialog = builder.create()
+        alertDialog.show()
     }
 
     override fun callGetWheatherApi(endDate: String) {
